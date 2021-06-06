@@ -1,0 +1,7 @@
+Consigna: agregar SEO a tu Proyecto Final. 
+
+Se agregan keywords, descripción, títulos y encabezado a todas las páginas.
+Cada página tiene su propio título para diferenciarla de las demás.
+Los keywords están relacionados a la marca y los productos que comercializa.
+La descripción es el proyecto de la marca.
+Se respetan las etiquetas por jerarquía.
