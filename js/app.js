@@ -21,7 +21,7 @@ cuotas(cantidad){
 }
 
 mostrar () {
-    console.log(`${this.nombre} de ${this.mililitros} ml vale ${this.precio}`)
+    alert(`${this.nombre} de ${this.mililitros} ml vale ${this.precio}`)
 }
 
 }
@@ -38,10 +38,10 @@ let usuario = prompt(`Hola! Cómo te llamas?`)
 
 let consulta = confirm ("Querés saber qué productos tenemos disponibles?")
 if (consulta == true) {
-    console.log(`${usuario}! Este es el listado de productos: ${listaDeProductos}`)
+    alert(`${usuario}! Este es el listado de productos disponibles: ${listaDeProductos}`)
 }
 else {
-    console.log(`${usuario}! No has querido ver nuestro listado`)
+    alert(`${usuario}! De todas formas podés navegar la página para conocer todos nuestros productos`)
 }
 
 let masVendido = listaDeProductos.slice(1,2)
@@ -57,18 +57,15 @@ else {
 let  envio = confirm ("Querés saber el costo con el envío?")
 
 if(envio == true) {
-    console.log(`El costo de envío de la perfumina de 50 ml es de ${perfumina50.envio()} pesos`)
-    console.log(`El costo de envío de la perfumina de 100 ml es de ${perfumina100.envio()} pesos`)
-    console.log(`El costo de envío del difusor de 100 ml es de ${difusor100.envio()} pesos`)
+    alert(`El costo de envío de la perfumina de 50 ml es de ${perfumina50.envio()} pesos, el de la perfumina de 100 ml es de ${perfumina100.envio()}  pesos y el del difusor de 100 ml es de ${difusor100.envio()} pesos`)
+       
 }else{
-    console.log(`El costo de la perfumina de 50 ml retirando en nuestras tiendas es ${perfumina50.precio}`)
-    console.log(`El costo de la perfumina de 100 ml retirando en nuestras tiendas es ${perfumina100.precio}`)
-    console.log(`El costo del difusor de 100 ml retirando en nuestras tiendas es ${difusor100.precio}`)
+    alert(`Ok ${usuario} cualquier duda contactate con nosotros a través de nuestras redes`)
 }
 
 let compra = confirm (`Querés comprar algún producto?`)
 if (compra == true) {
-    alert(`Muchas gracias por tu interés en los productos de MS. ${usuario} mandanos un whatsapp a 2494497238 indicando artículo y provincia`)
+    alert(`Muchas gracias por tu interés en los productos de MS. ${usuario} mandanos un whatsapp haciendo click en link que figura abajo de esta página indicando tu pedido`)
 }
 else {
     alert(`Gracias por su visita! Te esperamos de nuevo ${usuario}`)
