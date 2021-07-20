@@ -99,12 +99,12 @@
 						<div class="review_form_content">
 							<form action="#" id="review_form" class="review_form">
 								<div class="d-flex flex-md-row flex-column align-items-start justify-content-between">
-									<input type="text" class="review_form_input" placeholder="Nombre" required="required">
-									<input type="email" class="review_form_input" placeholder="E-mail" required="required">
-									<input type="text" class="review_form_input" placeholder="Teléfono">
+									<input type="text" class="review_form_input" id="nombre" placeholder="Nombre" required="required">
+									<input type="email" class="review_form_input" id="email" placeholder="E-mail" required="required">
+									<input type="text" class="review_form_input" id="telefono" placeholder="Teléfono">
 								</div>
-								<textarea class="review_form_text" name="review_form_text" placeholder="Mensaje"></textarea>
-								<button type="submit" class="review_form_button">enviar</button>
+								<textarea class="review_form_text" name="review_form_text" id="mensaje" placeholder="Mensaje"></textarea>
+								<button type="submit" class="review_form_button" id= "enviar">enviar</button>
 							</form>
 						</div>
 					</div>
@@ -112,6 +112,24 @@
 			</div>
 		</div>
 	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col">
+	<table id="tabla">
+	<tr>
+	<td class="col-1">-</td>
+	<th class="col-2">Nombre</th>
+	<th class="col-2">Email</th>
+	<th class="col-2">Telefono</th>
+	<th class="col-2">Pedido</th>
+	<td class="col-2">Borrar</td>
+	</tr>
+	</table>
+</div>
+</div>
+</div>
+	
 
 	<!-- Texto de contacto -->
 
@@ -224,5 +242,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCIwF204lFZg1y4kPSIhKaHEXMLYxxuMhA"></script>
 <script src="js/contact_custom.js"></script>
+<script src="./js/app.js"></script>
 </body>
 </html>
