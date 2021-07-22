@@ -1,4 +1,4 @@
-//Seleccionao elementos HTML y lo guardo como constante
+//Selecciono elementos HTML y lo guardo como constante
 const nombre = document.querySelector('.nombre');
 const email = document.querySelector('.email');
 const mensaje = document.querySelector('.mensaje');
