@@ -1,10 +1,3 @@
-//Selecciono elementos HTML y lo guardo como constante
-const nombre = document.querySelector('.nombre');
-const email = document.querySelector('.email');
-const mensaje = document.querySelector('.mensaje');
-const review_form_button = document.querySelector('.review_form_button');
-
-
 //entidades
 class Usuario {
     constructor(nombre, email, telefono, mensaje, id){
