@@ -1,28 +1,3 @@
-//Seleccionamos los elementos HTML y los guardamos en constantes
-//const nombre = document.querySelector('.nombre');
-//const email = document.querySelector('.email');
-//const mensaje = document.querySelector('.mensaje');
-//const review_form_button = document.querySelector('.review_form_button');
-//const divListaContactos = document.querySelector('.lista-contactos');
-
-//Guardar el local storage en una constante
-//const db = window.localStorage;
-
-//Escuchamos los eventos y les asignamos la función correspondiente
-//review_form_button.onclick = ()=> {
-  //  const contacto = {
-   //     id: Math.random(1, 100),
-    //    nombre: nombre.value,
-    //    email: email.value,
-  //      mensaje: mensaje.value
- //   }
-  //  guardarContacto(db, contacto);
-//}
-
-//Cargamos los contactos
-//const cargarContactos = (db, divListaContactos);
-
-//
 //entidades
 class Usuario {
     constructor(nombre, email, telefono, mensaje, id){
