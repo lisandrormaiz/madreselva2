@@ -1,3 +1,74 @@
+//Selecciono elementos HTML y lo guardo como constante
+const nombre = document.querySelector('.nombre');
+const email = document.querySelector('.email');
+const mensaje = document.querySelector('.mensaje');
+const review_form_button = document.querySelector('.review_form_button');
+
+class Producto {
+    constructor(prod, mililitros, precio, img){
+    this.prod = prod
+    this.mililitros = mililitros
+    this.precio = precio
+    this.img = img
+}
+
+envio() {
+    let costoEnvio = this.precio * 0.1
+    return costoEnvio
+}
+
+}
+
+const Productos = []
+
+//creo productos mediante push//
+
+Productos.push(new Producto("Perfumina 100ml", "50", Number(210), "https://res.cloudinary.com/dfqfzzcxc/image/upload/v1627249279/promo_2_asxbgq.jpg"))
+Productos.push(new Producto("Perfumina 250ml", "100", Number(350), "https://res.cloudinary.com/dfqfzzcxc/image/upload/v1627249276/product_2_ig9vac.jpg"))
+Productos.push(new Producto("Difusor 50ml", "50", Number(400), "https://res.cloudinary.com/dfqfzzcxc/image/upload/v1627249277/product_4_utnene.jpg"))
+
+
+//local storage//
+
+function saveLocal(){
+    let aJson = JSON.stringify(Productos)
+    localStorage.setItem("productos", aJson)
+}
+
+
+saveLocal()
+
+//se agrega un título con getElementById//
+
+const body = document.body
+let resultado = document.getElementById("resultado")
+let titulo = document.createElement("h1")
+titulo.setAttribute("class", "text-center mt-5")
+body.prepend(titulo)
+
+titulo.textContent= "Productos actualmente en stock"
+
+//se agrega el listado de productos con js//
+
+function card() {
+    let idImprimir = document.getElementById("cardsId")
+Productos.forEach(e => {
+    idImprimir.innerHTML += `
+    <div class="col-lg-4 product_col">
+                <div class="card">
+                  <div class="gallery_image">
+                    <img src=${e.img} class="card-img-top">
+                    <h5 class="card-title">${e.prod}</h5>
+                    <p class="card-text">${e.precio}</p>
+                  </div>
+            </div>
+    `
+})
+}
+
+card()
+
+
 //entidades
 class Usuario {
     constructor(nombre, email, telefono, mensaje, id){
