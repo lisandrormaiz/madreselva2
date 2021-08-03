@@ -1,105 +1,4 @@
-
-/*
-class Producto {
-    constructor(prod, mililitros, precio, img){
-    this.prod = prod
-    this.mililitros = mililitros
-    this.precio = precio
-    this.img = img
-}
-
-envio() {
-    let costoEnvio = this.precio * 0.1
-    return costoEnvio
-}
-
-}
-
-const Productos = []
-
-//creo productos mediante push//
-
-Productos.push(new Producto("Perfumina 100ml", "100", Number(210), "https://res.cloudinary.com/dfqfzzcxc/image/upload/v1627249279/promo_2_asxbgq.jpg"))
-Productos.push(new Producto("Perfumina 250ml", "250", Number(350), "https://res.cloudinary.com/dfqfzzcxc/image/upload/v1627249276/product_2_ig9vac.jpg"))
-Productos.push(new Producto("Difusor 50ml", "50", Number(400), "https://res.cloudinary.com/dfqfzzcxc/image/upload/v1627249277/product_4_utnene.jpg"))
-
-
-//local storage//
-
-function saveLocal(){
-    let aJson = JSON.stringify(Productos)
-    localStorage.setItem("productos", aJson)
-}
-
-
-saveLocal()
-
-//se agrega un título con getElementById//
-
-const body = document.body
-let resultado = document.getElementById("resultado")
-let titulo = document.createElement("h1")
-titulo.setAttribute("class", "text-center mt-5")
-body.prepend(titulo)
-
-titulo.textContent= "Productos actualmente en stock"
-
-//se agrega el listado de productos con js//
-
-function card() {
-    let idImprimir = document.getElementById("cardsId")
-Productos.forEach(e => {
-    idImprimir.innerHTML += `
-    <div class="col-lg-4 product_col">
-                <div class="card">
-                  <div class="gallery_image">
-                    <img src=${e.img} class="card-img-top">
-                    <h5 class="card-title">${e.prod}</h5>
-                    <p class="card-text">${e.precio}</p>
-                  </div>
-            </div>
-    `
-})
-}
-
-card()
-*/
-/*
-document.querySelector('#boton').addEventListener('click', traerDatos);
-
-function traerDatos(){
-
-    const xhttp = new XMLHttpRequest();
-
-    xhttp.open('GET', 'catalogo.json', true);
-
-   
-
-    xhttp.onreadystatechange = function(){
-        if(this.readyState == 4 && this.status == 200){
-            let datos = JSON.parse(this.responseText);
-            let res = document.querySelector('#res');
-            res.innerHTML = '';
-    for(let item of datos){
-    res.innerHTML +=
-            `
-            <tr>
-                <th>${item.prod}</th>
-                <th>${item.mililitros}</th>
-                <th>${item.precio}</th>
-                <th>${item.img}</th>
-            </tr>    
-            `
-    
-}
-
-        }
-    }
-
-}
-
-*/
-
+//js para carro
 
 window.onload = function () {
     // Variables
@@ -134,9 +33,7 @@ window.onload = function () {
 
     // Funciones
 
-    /**
-    * Dibuja todos los productos a partir de la base de datos. No confundir con el carrito
-    */
+  
     function renderizarProductos() {
         baseDeDatos.forEach((info) => {
             // Estructura
@@ -194,16 +91,16 @@ window.onload = function () {
         DOMcarrito.textContent = '';
         // Quitamos los duplicados
         const carritoSinDuplicados = [...new Set(carrito)];
-        // Generamos los Nodos a partir de carrito
+        // Genera nodos
         carritoSinDuplicados.forEach((item) => {
-            // Obtenemos el item que necesitamos de la variable base de datos
+           
             const miItem = baseDeDatos.filter((itemBaseDatos) => {
-                // ¿Coincide las id? Solo puede existir un caso
+                // Coincide las id? Solo puede existir un caso
                 return itemBaseDatos.id === parseInt(item);
             });
             // Cuenta el número de veces que se repite el producto
             const numeroUnidadesItem = carrito.reduce((total, itemId) => {
-                // ¿Coincide las id? Incremento el contador, en caso contrario no mantengo
+                // Coincide las id? Incremento el contador, en caso contrario no mantengo
                 return itemId === item ? total += 1 : total;
             }, 0);
             // Creamos el nodo del item del carrito
@@ -217,7 +114,7 @@ window.onload = function () {
             miBoton.style.marginLeft = '1rem';
             miBoton.dataset.item = item;
             miBoton.addEventListener('click', borrarItemCarrito);
-            // Mezclamos nodos
+            // Mezclar nodos
             miNodo.appendChild(miBoton);
             DOMcarrito.appendChild(miNodo);
         });
@@ -227,15 +124,15 @@ window.onload = function () {
     * Evento para borrar un elemento del carrito
     */
     function borrarItemCarrito(evento) {
-        // Obtenemos el producto ID que hay en el boton pulsado
+       
         const id = evento.target.dataset.item;
-        // Borramos todos los productos
+        // Borra todos los productos
         carrito = carrito.filter((carritoId) => {
             return carritoId !== id;
         });
-        // volvemos a renderizar
+        // init
         renderizarCarrito();
-        // Calculamos de nuevo el precio
+        // Calcula de nuevo el precio
         calcularTotal();
     }
 
@@ -243,17 +140,17 @@ window.onload = function () {
     * Calcula el precio total teniendo en cuenta los productos repetidos
     */
     function calcularTotal() {
-        // Limpiamos precio anterior
+        // Limpia precio anterior
         total = 0;
-        // Recorremos el array del carrito
+        // Recorre el array del carrito
         carrito.forEach((item) => {
-            // De cada elemento obtenemos su precio
+            
             const miItem = baseDeDatos.filter((itemBaseDatos) => {
                 return itemBaseDatos.id === parseInt(item);
             });
             total = total + miItem[0].precio;
         });
-        // Renderizamos el precio en el HTML
+        
         DOMtotal.textContent = total.toFixed(2);
     }
 
@@ -261,9 +158,9 @@ window.onload = function () {
     * Varia el carrito y vuelve a dibujarlo
     */
     function vaciarCarrito() {
-        // Limpiamos los productos guardados
+        // Limpia los productos guardados
         carrito = [];
-        // Renderizamos los cambios
+        
         renderizarCarrito();
         calcularTotal();
     }
