@@ -120,185 +120,32 @@
 	</div>
 
 	<!-- Carro -->
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
+ <div></div>
 
-	<div class="cart_container">
-		<div class="container">
-			<div class="row">
-				<div class="col">
-					<div class="cart_title">Tu compra</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="cart_bar d-flex flex-row align-items-center justify-content-start">
-						<div class="cart_bar_title_name">Producto</div>
-						<div class="cart_bar_title_content ml-auto">
-							<div class="cart_bar_title_content_inner d-flex flex-row align-items-center justify-content-end">
-								<div class="cart_bar_title_price">Precio</div>
-								<div class="cart_bar_title_quantity">Cantidad</div>
-								<div class="cart_bar_title_total">Total</div>
-								<div class="cart_bar_title_button"></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="cart_products">
-						<ul>
-							<li class=" cart_product d-flex flex-md-row flex-column align-items-md-center align-items-start justify-content-start">
-								<!-- Producto -->
-								<div class="cart_product_image"><img src="images/cart_product_1.jpg" alt="img"></div>
-								<!-- Producto -->
-								<div class="cart_product_name"><a href="product.html">Difusor 50ml</a></div>
-								<div class="cart_product_info ml-auto">
-									<div class="cart_product_info_inner d-flex flex-row align-items-center justify-content-md-end justify-content-start">
-										<!-- Precio -->
-										<div class="cart_product_price">$210</div>
-										<!-- Cantidad -->
-										<div class="product_quantity_container">
-											<div class="product_quantity clearfix">
-												<input id="quantity_input" type="text" pattern="[0-9]*" value="1">
-												<div class="quantity_buttons">
-													<div id="quantity_inc_button" class="quantity_inc quantity_control"><i class="fa fa-caret-up" aria-hidden="true"></i></div>
-													<div id="quantity_dec_button" class="quantity_dec quantity_control"><i class="fa fa-caret-down" aria-hidden="true"></i></div>
-												</div>
-											</div>
-										</div>
-										<!-- Total -->
-										<div class="cart_product_total">$210</div>
-										<!-- Botón de eliminar -->
-										<div class="cart_product_button">
-											<button class="cart_product_remove"><img src="images/trash.png" alt="img"></button>
-										</div>
-									</div>
-								</div>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col">
-					<div class="cart_control_bar d-flex flex-md-row flex-column align-items-start justify-content-start">
-						<button class="button_clear cart_button">vaciar carro</button>
-						<button class="button_update cart_button">actualizar carro</button>
-						<button class="button_update cart_button_2 ml-md-auto">seguir comprando</button>
-					</div>
-				</div>
-			</div>
-			<div class="row cart_extra">
-				<!-- Cupón de descuento -->
-				<div class="col-lg-6">
-					<div class="cart_coupon">
-						<div class="cart_title">código de descuento</div>
-						<form action="#" class="cart_coupon_form d-flex flex-row align-items-start justify-content-start" id="cart_coupon_form">
-							<input type="text" class="cart_coupon_input" placeholder="Código de descuento" required="required">
-							<button class="button_clear cart_button_2">aplicar cupón</button>
-						</form>
-					</div>
-				</div>
-				<!-- Carro Total -->
-				<div class="col-lg-5 offset-lg-1">
-					<div class="cart_total">
-						<div class="cart_title">total</div>
-						<ul>
-							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="cart_total_title">Subtotal</div>
-								<div class="cart_total_price ml-auto">$210</div>
-							</li>
-							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="cart_total_title">Envío</div>
-								<div class="cart_total_price ml-auto">$50</div>
-							</li>
-							<li class="d-flex flex-row align-items-center justify-content-start">
-								<div class="cart_total_title">Total</div>
-								<div class="cart_total_price ml-auto">$260</div>
-							</li>
-						</ul>
-						<button class="cart_total_button"><a href="checkout.html">continuar</a></button>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Newsletter -->
-
-	<div class="newsletter">
-		<div class="newsletter_content">
-			<div class="newsletter_image parallax-window" data-parallax="scroll" data-image-src="images/cart_nl.jpg" data-speed="0.8"></div>
-			<div class="container">
-				<div class="row options">
-
-					<!-- Options Item -->
-					<div class="col-lg-3">
-						<div class="options_item d-flex flex-row align-items-center justify-content-start">
-							<div class="option_image"><img src="images/option_1.png" alt="img"></div>
-							<div class="option_content">
-								<div class="option_title">Promociones</div>
-								<div class="option_subtitle">Aprovechá los descuentos</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Options Item -->
-					<div class="col-lg-3">
-						<div class="options_item d-flex flex-row align-items-center justify-content-start">
-							<div class="option_image"><img src="images/option_2.png" alt="img"></div>
-							<div class="option_content">
-								<div class="option_title">Entrega full</div>
-								<div class="option_subtitle">En todos los pedidos</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Options Item -->
-					<div class="col-lg-3">
-						<div class="options_item d-flex flex-row align-items-center justify-content-start">
-							<div class="option_image"><img src="images/option_3.png" alt="img"></div>
-							<div class="option_content">
-								<div class="option_title">Pago seguro</div>
-								<div class="option_subtitle">Con todas las tarjetas</div>
-							</div>
-						</div>
-					</div>
-
-					<!-- Options Item -->
-					<div class="col-lg-3">
-						<div class="options_item d-flex flex-row align-items-center justify-content-start">
-							<div class="option_image"><img src="images/option_4.png" alt="img"></div>
-							<div class="option_content">
-								<div class="option_title">Soporte 24/7</div>
-								<div class="option_subtitle">Escribinos</div>
-							</div>
-						</div>
-					</div>
-
-				</div>
-				<div class="row newsletter_row">
-					<div class="col">
-						<div class="section_title_container text-center">
-							<div class="section_subtitle">aromas ms</div>
-							<div class="section_title">souvenirs</div>
-						</div>
-					</div>
-				</div>
-				<div class="row newsletter_container">
-					<div class="col-lg-10 offset-lg-1">
-						<div class="newsletter_form_container">
-							<form action="#">
-								<input type="email" class="newsletter_input" required="required" placeholder="E-mail here">
-								<button type="submit" class="newsletter_button">enviar</button>
-							</form>
-						</div>
-						<div class="newsletter_text">Dejanos tu correo para poder ir organizando los souvenirs de tu próximo evento!</div>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12"></div>
+            <!-- Elementos generados a partir del JSON -->
+            <div id="items" class="col-sm-12 row"></div>
+            <!-- Carrito -->
+         
+            <div class="col-sm-12">
+                <h2>Carrito</h2>
+                <!-- Elementos del carrito -->
+                <ul id="carrito" class="list-group"></ul>
+                <hr>
+                <!-- Precio total -->
+                <p class="text-right">Total: <span id="total"></span>pesos;</p>
+                <button id="boton-vaciar" class="btn btn-danger">Vaciar</button>
+            </div>
+			
+	
 
 	<!-- Footer -->
 
@@ -346,5 +193,6 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> Todos
 <script src="plugins/easing/easing.js"></script>
 <script src="plugins/parallax-js-master/parallax.min.js"></script>
 <script src="js/cart_custom.js"></script>
+<script src="./app2.js"></script>
 </body>
 </html>
