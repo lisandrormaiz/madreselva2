@@ -1,18 +1,3 @@
-/* JS Document */
-
-/******************************
-
-[Table of Contents]
-
-1. Vars and Inits
-2. Set Header
-3. Init Menu
-4. Init Isotope
-5. Init Price Slider
-6. Init Products Height
-
-
-******************************/
 
 $(document).ready(function()
 {
@@ -20,7 +5,7 @@ $(document).ready(function()
 
 	/* 
 
-	1. Vars and Inits
+	Variables
 
 	*/
 
@@ -48,7 +33,7 @@ $(document).ready(function()
 
 	/* 
 
-	2. Set Header
+	Header
 
 	*/
 
@@ -118,7 +103,7 @@ $(document).ready(function()
 
 	/* 
 
-	4. Init Isotope
+	Isótopo
 
 	*/
 
@@ -155,7 +140,7 @@ $(document).ready(function()
 	            }
 	        });
 	        
-	        // Sort based on the value from the sorting_type dropdown
+	        // Clasificación
 	        sortingButtons.each(function()
 	        {
 	        	$(this).on('click', function()
@@ -168,7 +153,7 @@ $(document).ready(function()
 	        	});
 	        });
 
-	        // Change view to Box
+	        // Cambio a vista de box
 	        if($('.box_view').length)
 	        {
 	        	var box = $('.box_view');
@@ -184,7 +169,7 @@ $(document).ready(function()
 	        	});
 	        }
 
-	        // Change view to List
+	        // Cambiovista de lista
 	        if($('.detail_view').length)
 	        {
 	        	var detail = $('.detail_view');
@@ -204,7 +189,7 @@ $(document).ready(function()
 	        	});
 	        }
 
-	         // Show only a selected number of items
+	         // Mostrar sólo
 	        sortNums.each(function()
 	        {
 	        	$(this).on('click', function()
@@ -220,7 +205,7 @@ $(document).ready(function()
 
 	/* 
 
-	5. Init Price Slider
+	Precio
 
 	*/
 
@@ -263,11 +248,7 @@ $(document).ready(function()
     	}	
     }
 
-    /* 
 
-	6. Init Products Height
-
-	*/
 
 	function initProductsHeight()
 	{
