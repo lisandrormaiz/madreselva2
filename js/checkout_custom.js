@@ -1,15 +1,4 @@
-/* JS Document */
 
-/******************************
-
-[Table of Contents]
-
-1. Vars and Inits
-2. Set Header
-3. Init Menu
-
-
-******************************/
 
 $(document).ready(function()
 {
@@ -17,7 +6,7 @@ $(document).ready(function()
 
 	/* 
 
-	1. Vars and Inits
+	Variables
 
 	*/
 
@@ -42,7 +31,7 @@ $(document).ready(function()
 
 	/* 
 
-	2. Set Header
+	Header
 
 	*/
 
@@ -60,7 +49,7 @@ $(document).ready(function()
 
 	/* 
 
-	3. Init Menu
+	Iniciar Menu
 
 	*/
 
