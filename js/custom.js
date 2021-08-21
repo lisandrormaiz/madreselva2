@@ -1,19 +1,4 @@
-/* JS Document */
 
-/******************************
-
-[Table of Contents]
-
-1. Vars and Inits
-2. Set Header
-3. Init Menu
-4. Init Home Slider
-5. Init Gallery
-6. Init Testimonials Slider
-7. Init Lightbox
-
-
-******************************/
 
 $(document).ready(function()
 {
@@ -21,7 +6,7 @@ $(document).ready(function()
 
 	/* 
 
-	1. Vars and Inits
+	Variables
 
 	*/
 
@@ -50,7 +35,7 @@ $(document).ready(function()
 
 	/* 
 
-	2. Set Header
+	Header
 
 	*/
 
@@ -68,7 +53,7 @@ $(document).ready(function()
 
 	/* 
 
-	3. Init Menu
+	Menu
 
 	*/
 
@@ -120,7 +105,7 @@ $(document).ready(function()
 
 	/* 
 
-	4. Init Home Slider
+	Home Slider
 
 	*/
 
@@ -172,7 +157,7 @@ $(document).ready(function()
 
 	/* 
 
-	5. Init Gallery
+	Galería
 
 	*/
 
@@ -213,7 +198,7 @@ $(document).ready(function()
 
 	/* 
 
-	6. Init Testimonials Slider
+	Testimonios Slider
 
 	*/
 
@@ -236,7 +221,7 @@ $(document).ready(function()
 
 	/*
 
-	7. Init Lightbox
+	Lightbox
 
 	*/
 
