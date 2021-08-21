@@ -1,17 +1,4 @@
-/* JS Document */
 
-/******************************
-
-[Table of Contents]
-
-1. Vars and Inits
-2. Set Header
-3. Init Menu
-4. Init Google Map
-5. Init Accordions
-
-
-******************************/
 
 $(document).ready(function()
 {
@@ -19,7 +6,7 @@ $(document).ready(function()
 
 	/* 
 
-	1. Vars and Inits
+	Variables
 
 	*/
 
@@ -47,7 +34,7 @@ $(document).ready(function()
 
 	/* 
 
-	2. Set Header
+	Header
 
 	*/
 
@@ -65,7 +52,7 @@ $(document).ready(function()
 
 	/* 
 
-	3. Init Menu
+	Iniciar Menu
 
 	*/
 
@@ -144,23 +131,10 @@ $(document).ready(function()
 			styles:[]
     	}
 
-    	// Initialize a map with options
-    	map = new google.maps.Map(document.getElementById('map'), mapOptions);
-   
-		// Re-center map after window resize
-		google.maps.event.addDomListener(window, 'resize', function()
-		{
-			setTimeout(function()
-			{
-				google.maps.event.trigger(map, "resize");
-				map.setCenter(myLatlng);
-			}, 1400);
-		});
-	}
-
+    	
 	/* 
 
-	5. Init Accordions
+	Inicio accordions
 
 	*/
 
